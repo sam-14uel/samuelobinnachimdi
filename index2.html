@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -800,6 +801,49 @@
             }
           }
 
+
+          /* Lead capture form styling */
+        .lead-capture-form {
+            background-color: var(--gray, #333333);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        .lead-capture-form input {
+            background-color: var(--darker, #0a0a0a);
+            border: 1px solid var(--light-gray, #aaaaaa);
+            border-radius: 5px;
+            color: var(--text, #ffffff);
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .lead-capture-form button {
+            background-color: var(--primary, #6c63ff);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .lead-capture-form button:hover {
+            background-color: var(--secondary, #4a44b3);
+        }
+
+        .lead-capture-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text, #ffffff);
+        }
+
     </style>
 </head>
 <body>
@@ -1261,8 +1305,18 @@
         <div class="messages-container" id="messagesContainer">
             <!-- Messages will appear here -->
             <div class="message bot-message">
-            <div class="message-content">Hello! How can I help you today?</div>
+                <div class="message-content">Hello! How can I help you today?</div>
             </div>
+
+            <div class="message bot-message">
+                <div class="lead-capture-form">
+                    <div class="lead-capture-title">Please fill in your details:</div>
+                    <input type="text" id="leadName" placeholder="Your Name" required="">
+                    <input type="email" id="leadEmail" placeholder="Your Email" required="">
+                    <button id="submitLead">Submit</button>
+                </div>
+            </div>
+
         </div>
         <div class="chat-input-container">
             <input type="text" class="chat-input" id="userInput" placeholder="Type a message...">
